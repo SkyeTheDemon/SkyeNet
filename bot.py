@@ -1,8 +1,14 @@
 import discord
 import datetime
+import json
 
-TOKEN = ""
+# Get Token
+with open("config.json") as file:
+    config = json.load(file)
 
+TOKEN = config["token"]
+
+# Actual Bot
 client = discord.Client()
 
 @client.event
