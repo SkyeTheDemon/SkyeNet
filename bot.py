@@ -49,14 +49,23 @@ async def on_message(message):
         shot = client.get_emoji(740427994602012692)
         await message.add_reaction(shot)
 
-
+        
 @client.event
 async def on_voice_state_update(member, before, after):
-    role = member.guild.get_role(724674548703952979)
-    vc = member.guild.get_channel(724674837817065572)
-    if after.channel == vc:
-        await member.add_roles(role)
-    else:
-        await member.remove_roles(role)
+    channels = {
+        # Voice Channel: Role
+        724674837817065572: 724674548703952979,
+    }
+    if after.channel:
+        channel = after.channel
+    elif before.channel:
+        channel = before.channel
+
+    if role := channels.get(channel.id):
+        if after.channel == channel:
+            await member.add_roles(role)
+        else:
+            await member.remove_roles(role)
+
 
 client.run(TOKEN)
