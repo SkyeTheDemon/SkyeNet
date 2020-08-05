@@ -6,7 +6,7 @@ it will have some actual genuine uses aside from some joke commands in the near 
 <br>You're also welcome to give ideas to add onto the bot itself by DMing Skye who owns the server.
 
 # Updates
-### 8/5/2020 SkyeNet/Skye♪ runs 24/7 off of a server owned by Lepto.
+### 8/5/2020 SkyeNet/Skye♪ runs 24/7 off of some throwaway aws instance from Lepto, expect crashes frequently.
 
 # Notes
 ### Token shenanagins
