@@ -12,7 +12,3 @@ it will have some actual genuine uses aside from some joke commands in the near 
 ### Token shenanagins
 1. create a `config.json` in the root directory
 2. fill it with `{ "token": ___ }`
-
-# Contributors
-* [SkyeTheDemon](https://github.com/SkyeTheDemon)
-* [LeptoFlare](https://github.com/LeptoFlare)
