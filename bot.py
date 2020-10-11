@@ -26,14 +26,17 @@ async def on_message(message):
     # This if statement stops the bot replying to itself
     if message.author == client.user:
         return
-
+    if message.author.id == 699892206126760026:
+        await message.add_reaction("💩")
     if "wawa" in message.content:
         await message.channel.send("wawa!!")
 
-    if any(message.content.startswith(f"skye {verb}") for verb in ["fell asleep", "passed out"]):
+    if any(message.content.lower().startswith(f"skye {verb}") for verb in ["fell asleep", "passed out"]):
+        if message.author.id == 615249674084810763:
+            await message.channel.send(f"<@{message.author.id}>, Fuck you")
         skye = message.guild.get_member(283837101554794497)
-        bed = message.guild.get_channel(715335459433087098)
-        if not skye.voice or not skye.voice.channel:
+        bed = message.guild.get_channel(752293783558815854)
+        if not skye.voice or not skye.voice.channel or skye.voice.channel.id == 757711076912529460:
             await message.channel.send(f"<@{message.author.id}>, Skye hasn't passed out yet, liar.")
         elif skye.voice.channel.id == bed.id:
             await message.channel.send(f"<@{message.author.id}>, Skye already passed out.")
