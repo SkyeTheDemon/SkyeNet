@@ -35,7 +35,7 @@ async def on_message(message):
         if message.author.id == 615249674084810763:
             await message.channel.send(f"<@{message.author.id}>, Fuck you")
         skye = message.guild.get_member(283837101554794497)
-        bed = message.guild.get_channel(752293783558815854)
+        bed = message.guild.get_channel(752293783558815854) 
         if not skye.voice or not skye.voice.channel or skye.voice.channel.id == 757711076912529460:
             await message.channel.send(f"<@{message.author.id}>, Skye hasn't passed out yet, liar.")
         elif skye.voice.channel.id == bed.id:
@@ -54,7 +54,7 @@ async def on_message(message):
         elif message.content.endswith("eu"):
             await message.channel.send("\u200B\n\u200B")
 
-    elif any(weeb_shit in message.content.split() for weeb_shit in ["owo", "uwu", "umu", "88w88", "ÕwÕ", "ŌwŌ", "ÓwÒ", "ÒwÓ", "ÔwÔ"]):
+    elif any(weeb_shit in message.content.split() for weeb_shit in ["owo", "uwu", "umu", "88w88", "ÕwÕ", "ŌwŌ", "ÓwÒ", "ÒwÓ", "ÔwÔ", "8w8", "0w0", "69w69"]):
         shot = client.get_emoji(740427994602012692)
         await message.add_reaction(shot)
 
