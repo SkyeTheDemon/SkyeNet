@@ -28,10 +28,11 @@ async def on_message(message):
         return
     if message.author.id == 699892206126760026:
         await message.add_reaction("💩")
-    if "wawa" in message.content:
-        await message.channel.send("wawa!!")
 
-    if any(message.content.lower().startswith(f"skye {verb}") for verb in ["fell asleep", "passed out"]):
+    lower = message.content.lower()
+    if lower.startswith("wawa")
+        await message.channel.send("wawa!!")
+    if any(lower.startswith(f"skye {verb}") for verb in ["fell asleep", "passed out"]):
         if message.author.id == 615249674084810763:
             await message.channel.send(f"<@{message.author.id}>, Fuck you")
         skye = message.guild.get_member(283837101554794497)
@@ -44,14 +45,14 @@ async def on_message(message):
             await skye.move_to(bed, reason=message.content)
             await message.add_reaction("💙")
 
-    elif message.content.startswith("wholesome "):
-        if message.content.endswith("na"):
+    elif lower.startswith("wholesome "):
+        if lower.endswith("na"):
             await message.channel.send("that's a fucking joke.")
-        elif message.content.endswith("jp"):
+        elif lower.endswith("jp"):
             await message.channel.send("are your friends american?")
-        elif message.content.endswith("au"):
+        elif lower.endswith("au"):
             await message.channel.send("They may be wholesome but they lag :(")
-        elif message.content.endswith("eu"):
+        elif lower.endswith("eu"):
             await message.channel.send("\u200B\n\u200B")
 
     elif any(weeb_shit in message.content.split() for weeb_shit in ["owo", "uwu", "umu", "88w88", "ÕwÕ", "ŌwŌ", "ÓwÒ", "ÒwÓ", "ÔwÔ", "8w8", "0w0", "69w69"]):
